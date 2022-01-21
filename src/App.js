@@ -1,24 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header/Header.js';
+import Content from './Content/Content.js';
+import Footer from './Footer/Footer.js';
+
+
+
+
 
 function App() {
+  const workExperiecneList = [
+    {
+      id: 1,
+      title:'Owner of an online store',
+      organization: 'Garderob_rivne',
+      period: '2017 - Present',
+      text: 'The owner of an online store on Instagram where I sell clothes and shoes.'
+    },
+    { 
+      id:2,
+      title:'Football coach',
+      organization: 'CFC "NADIYA"',
+      period: '2020 - 2021',
+      text: '(volunteer) Rivne city.'
+    },
+    { 
+      id:3,
+      title:'Football coach',
+      organization: 'CFC "IBC"',
+      period: '09/2021 - Present',
+      text: 'Football coach of the IBC team, Irpin city.'
+    }
+  ];
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header/>
+    <main className="page cv-page">
+    <Content workExperiecneList = {workExperiecneList}/>
+    </main>
+    <Footer/>
+    
+    </>
   );
 }
 
